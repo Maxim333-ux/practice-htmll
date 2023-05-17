@@ -1,0 +1,15 @@
+{
+  "folders": [
+	{
+		"name": "imagis",
+		"path": "../../../Desktop/progjeckt/goiteens-html/projekts/Web-studio/imagis"
+	},
+	{
+		"name": "practice-htmll",
+		"path": "."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "practice-htmll"
+  }
+}
