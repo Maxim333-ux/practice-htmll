@@ -51,6 +51,21 @@
         tempora quibusdam earum placeat deleniti vel error! Commodi dignissimos
         dolorum delectus, reiciendis vero voluptas hic?
       </p>
+      <button data-open-modal>open in modal</button>
+      <div class="backdrop is-hidden" data-backdrop>
+        <div class="modal">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia
+            praesentium ab nemo nobis in modi, doloribus consequuntur
+            accusantium numquam amet nostrum voluptates expedita voluptatum
+            placeat ullam soluta asperiores quos porro inventore. Veritatis
+            necessitatibus blanditiis officiis ipsum laudantium saepe rem
+            repellendus, eum quas, impedit sit inventore! Ratione saepe ipsam
+            numquam vitae.
+          </p>
+          <button data-close-modal>cloused in modal</button>
+        </div>
+      </div>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet Lorem
         ipsum dolor sit amet consectetur adipisicing elit. Recusandae, minus!
@@ -171,5 +186,25 @@
     </main>
 
     <footer></footer>
+    <script>
+      const refs = {
+        openModalBtn: document.querySelector("[data-open-modal]"),
+        closeModalBtn: document.querySelector("[data-close-modal]"),
+        backdrop: document.querySelector("[data-backdrop]"),
+      };
+
+      refs.openModalBtn.addEventListener("click", toggleModal);
+      refs.closeModalBtn.addEventListener("click", toggleModal);
+
+      refs.backdrop.addEventListener("click", logBackdropClick);
+
+      function toggleModal() {
+        refs.backdrop.classList.toggle("is-hidden");
+      }
+
+      function logBackdropClick() {
+        console.log("Это клик в бекдроп");
+      }
+    </script>
   </body>
 </html>
